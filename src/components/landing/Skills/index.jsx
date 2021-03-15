@@ -9,7 +9,7 @@ export const Skills = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Wrapper id="about">
+    <Wrapper id="o-nas">
       <SkillsWrapper as={Container}>
         <Thumbnail>
           <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />

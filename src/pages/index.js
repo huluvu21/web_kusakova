@@ -1,12 +1,123 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby'
 import { Layout, SEO } from 'components/common';
-import { Intro, Skills, Contact, Projects } from 'components/landing';
+import { Intro, Skills, Contact } from 'components/landing';
+import Hours from 'components/landing/Hours';
 
-export default () => (
-  <Layout>
+export default () => {
+  const data = useStaticQuery(graphql`
+    query HoursQuery {
+      kontentItemWeb(system: {codename: {eq: "web"}}) {
+        elements {
+          ordinacni_hodiny {
+            value {
+              ... on kontent_item_ordinacni_hodiny {
+                id
+                elements {
+                  pondeli {
+                    value {
+                      ... on kontent_item_ordinacni_hodiny___casovy_blok {
+                        id
+                        elements {
+                          zacatek {
+                            value
+                          }
+                          konec {
+                            value
+                          }
+                          poznamka {
+                            value
+                          }
+                        }
+                      }
+                    }
+                  }
+                  ctvrtek {
+                    value {
+                      ... on kontent_item_ordinacni_hodiny___casovy_blok {
+                        id
+                        elements {
+                          konec {
+                            value
+                          }
+                          poznamka {
+                            value
+                          }
+                          zacatek {
+                            value
+                          }
+                        }
+                      }
+                    }
+                  }
+                  patek {
+                    value {
+                      ... on kontent_item_ordinacni_hodiny___casovy_blok {
+                        id
+                        elements {
+                          konec {
+                            value
+                          }
+                          poznamka {
+                            value
+                          }
+                          zacatek {
+                            value
+                          }
+                        }
+                      }
+                    }
+                  }
+                  streda {
+                    value {
+                      ... on kontent_item_ordinacni_hodiny___casovy_blok {
+                        id
+                        elements {
+                          konec {
+                            value
+                          }
+                          poznamka {
+                            value
+                          }
+                          zacatek {
+                            value
+                          }
+                        }
+                      }
+                    }
+                  }
+                  utery {
+                    value {
+                      ... on kontent_item_ordinacni_hodiny___casovy_blok {
+                        id
+                        elements {
+                          konec {
+                            value
+                          }
+                          poznamka {
+                            value
+                          }
+                          zacatek {
+                            value
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  return <Layout>
     <SEO />
     <Intro />
+    <Hours hours={data.kontentItemWeb.elements.ordinacni_hodiny.value[0].elements} />
     <Skills />
     <Contact />
   </Layout>
-);
+};

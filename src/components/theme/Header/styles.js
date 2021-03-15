@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background: transparent;
+  position: fixed;
+  top: 0;  
+  background: ${({ theme }) => (theme === 'light' ? '#fff' : '#212121')};;
+  border-bottom-style: dotted;
+  border-bottom-color: grey;
+  border-bottom-width: 2px;
   width: 100%;
 `;
 
