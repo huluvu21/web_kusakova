@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container } from "components/common";
+import { ThemeContext } from "providers/ThemeProvider";
 import { Wrapper, HoursWrapper, FlexRow } from "./styles";
 import { HeadlineWrapper } from "components/common/HeadlineWrapper";
 
 const Hours = ({ hours }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
       <HeadlineWrapper id="ordinacni-hodiny" as={Container}>
@@ -55,6 +58,24 @@ const Hours = ({ hours }) => {
                 {blok.elements.poznamka.value})
               </p>
             ))}
+          </FlexRow>
+          <FlexRow theme={theme}>
+            <p>
+              Odběry krve a biologického materiálu: úterý, středa, pátek{" "}
+              <strong>6:30 - 7:15</strong>.
+            </p>
+          </FlexRow>
+          <FlexRow theme={theme}>
+            <p>
+              Telefonické konzultace a dotazy nelze řešit v ordinačních hodinách
+              a v době určené pro objednané.
+            </p>
+          </FlexRow>
+          <FlexRow theme={theme}>
+            <p>
+              V době určené pro objednané budou ošetřeni pouze tito předem
+              objednaní klienti. Neobjednaní klienti ošetřeni nebudou.
+            </p>
           </FlexRow>
         </HoursWrapper>
       </Wrapper>

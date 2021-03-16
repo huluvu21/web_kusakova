@@ -32,4 +32,20 @@ export const FlexRow = styled.div`
   @media (max-width: 960px) {
     flex-direction: column;
   }
+
+  p {
+    margin-bottom: 2.5rem;
+    font-size: 18pt;
+    font-weight: normal;
+    line-height: 1.2;
+    color: ${({ theme }) => (theme === 'dark' ? '#c7c7c7' : '#707070')};
+
+    @media (max-width: 960px) {
+      mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
+    }
+
+    strong {
+      color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#707070')};
+    }
+  }
 `;
