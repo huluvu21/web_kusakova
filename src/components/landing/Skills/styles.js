@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const SkillsWrapper = styled.div`
   padding: 4rem 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
   @media (max-width: 960px) {
@@ -21,7 +21,7 @@ export const SkillsWrapper = styled.div`
 
 export const Details = styled.div`
   flex: 1;
-  padding-left: 2rem;
+  padding-right: 2rem;
 
   @media (max-width: 960px) {
     padding-left: unset;
@@ -40,26 +40,24 @@ export const Details = styled.div`
 
   p {
     margin-bottom: 2.5rem;
-    font-size: 20pt;
+    font-size: 18pt;
     font-weight: normal;
-    line-height: 1.3;
+    line-height: 1.2;
     color: ${({ theme }) => (theme === 'dark' ? '#c7c7c7' : '#707070')};
 
     @media (max-width: 960px) {
       mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
     }
-  }
-`;
 
-export const Thumbnail = styled.div`
-  flex: 1;
-
-  @media (max-width: 960px) {
-    width: 100%;
-    margin-bottom: 2rem;
+    strong {
+      color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#707070')};
+    }
   }
 
-  img {
-    width: 100%;
+  li {
+    font-size: 18pt;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #707070;
   }
 `;

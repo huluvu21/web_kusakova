@@ -9,6 +9,8 @@ const NavbarLinks = ({ desktop }) => {
 
   return (
     <Wrapper desktop={desktop} theme={theme}>
+      <AnchorLink href="#aktuality">Aktuality</AnchorLink>
+      <AnchorLink href="#ordinacni-hodiny">Ordinační hodiny</AnchorLink>
       <AnchorLink href="#o-nas">O nás</AnchorLink>
       <AnchorLink href="#kontakt">Kontakt</AnchorLink>
       <ToggleTheme />

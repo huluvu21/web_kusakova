@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   padding: 4rem 0;
@@ -24,27 +24,24 @@ export const Details = styled.div`
   h1 {
     margin-bottom: 2rem;
     font-size: 26pt;
-    color: #212121;
   }
 
   p {
     margin-bottom: 2.5rem;
-    font-size: 20pt;
+    font-size: 18pt;
     font-weight: normal;
-    line-height: 1.3;
+    line-height: 1.2;
     color: #707070;
   }
-`;
 
-export const Thumbnail = styled.div`
-  flex: 1;
-
-  @media (max-width: 960px) {
-    width: 100%;
-    margin-bottom: 2rem;
+  ul {
+    margin-bottom: 2.5rem;
   }
 
-  img {
-    width: 100%;
+  li {
+    font-size: 18pt;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #707070;
   }
 `;

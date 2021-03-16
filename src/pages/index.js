@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Layout, SEO } from 'components/common';
 import { Intro, Skills, Contact } from 'components/landing';
 import Hours from 'components/landing/Hours';
+import News from 'components/landing/News';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -108,6 +109,21 @@ export default () => {
               }
             }
           }
+          dulezite_novinky {
+            value {
+              ... on kontent_item_novinka {
+                id
+                elements {
+                  nadpis {
+                    value
+                  }
+                  text {
+                    value
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -116,6 +132,7 @@ export default () => {
   return <Layout>
     <SEO />
     <Intro />
+    <News news={data.kontentItemWeb.elements.dulezite_novinky.value} />
     <Hours hours={data.kontentItemWeb.elements.ordinacni_hodiny.value[0].elements} />
     <Skills />
     <Contact />
