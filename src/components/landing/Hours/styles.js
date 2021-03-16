@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
 `;
 
 export const HoursWrapper = styled.div`
-  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
