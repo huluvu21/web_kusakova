@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 `;
 
 export const IntroWrapper = styled.div`
-  padding: 4rem 0;
+  padding: 6rem 0 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,31 +31,14 @@ export const Details = styled.div`
   h1 {
     margin-bottom: 2rem;
     font-size: 36pt;
-    color: ${({ theme }) => (theme === "light" ? "#212121" : "#fff")};
+    color: #212121;
 
     @media (max-width: 960px) {
-      mix-blend-mode: ${({ theme }) =>
-        theme === "light" ? "unset" : "difference"};
+      mix-blend-mode: unset;
     }
 
     @media (max-width: 680px) {
       font-size: 30pt;
-    }
-  }
-
-  h4 {
-    margin-bottom: 2.5rem;
-    font-size: 32pt;
-    font-weight: normal;
-    color: ${({ theme }) => (theme === "light" ? "#707070" : "#e6e6e6")};
-
-    @media (max-width: 960px) {
-      mix-blend-mode: ${({ theme }) =>
-        theme === "light" ? "unset" : "difference"};
-    }
-
-    @media (max-width: 680px) {
-      font-size: 26pt;
     }
   }
 
@@ -69,12 +52,16 @@ export const Details = styled.div`
 
 export const Thumbnail = styled.div`
   flex: 1;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 960px) {
     width: 100%;
   }
 
   img {
-    width: 100%;
+    @media (max-width: 960px) {
+      display: none;
+    }
   }
 `;

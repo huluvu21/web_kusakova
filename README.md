@@ -4,10 +4,6 @@
 
 [![Powered by Vercel](./powered-by-vercel.svg)](https://vercel.com?utm_source=smakosh)
 
-## Theme
-
-[Gatsby-theme-portfolio](https://github.com/smakosh/gatsby-theme-portfolio)
-
 ## Features
 
 - Eslint/Prettier configured

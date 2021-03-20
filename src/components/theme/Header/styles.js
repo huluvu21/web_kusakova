@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   position: fixed;
   top: 0;  
-  background: ${({ theme }) => (theme === 'light' ? '#fff' : '#212121')};;
+  background: #bfe4ff;
   border-bottom-style: dotted;
-  border-bottom-color: grey;
+  border-bottom-color: #212121;
   border-bottom-width: 2px;
   width: 100%;
 `;

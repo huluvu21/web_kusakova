@@ -1,17 +1,14 @@
-import React, { useContext } from 'react';
-import { Link } from 'gatsby';
-import { ThemeContext } from 'providers/ThemeProvider';
-import { Container } from 'components/common';
-import NavbarLinks from '../NavbarLinks';
-import { Wrapper, Brand } from './styles';
+import React from "react";
+import { Link } from "gatsby";
+import { Container } from "components/common";
+import NavbarLinks from "../NavbarLinks";
+import { Wrapper, Brand } from "./styles";
 
 const Navbar = () => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Wrapper as={Container}>
-      <Brand as={Link} to="/" theme={theme}>
-        Ordinace Kusákovi
+      <Brand as={Link} to="/">
+        Zdravotnické zařízení Kusákovi
       </Brand>
       <NavbarLinks desktop />
     </Wrapper>

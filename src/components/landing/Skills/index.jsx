@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "providers/ThemeProvider";
+import React from "react";
 import { Container } from "components/common";
 import { Wrapper, SkillsWrapper, Details } from "./styles";
 
 export const Skills = () => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Wrapper id="o-nas">
       <SkillsWrapper as={Container}>
-        <Details theme={theme}>
+        <Details>
           <h1>Náš tým</h1>
           <p>
             <strong>MUDr. Kusáková Dagmar</strong> - dlouholetá praxe v interní
@@ -20,7 +17,7 @@ export const Skills = () => {
             praktické medicíně a ošetřovatelství
           </p>
         </Details>
-        <Details theme={theme}>
+        <Details>
           <h1>Profil</h1>
           <p>
             Náš zdravotnický tým klade důraz na systematické sledování a

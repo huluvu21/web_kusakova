@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Container } from "components/common";
-import { Wrapper, NewsWrapper } from "./styles";
+import { Wrapper, NewsWrapper, NewsItem } from "./styles";
 import { HeadlineWrapper } from "components/common/HeadlineWrapper";
 
 const News = ({ news }) => {
@@ -12,10 +13,13 @@ const News = ({ news }) => {
       <Wrapper>
         <NewsWrapper as={Container}>
           {news.map((news) => (
-            <div
+            <NewsItem
               dangerouslySetInnerHTML={{ __html: news.elements.text.value }}
             />
           ))}
+          <p>
+            Všechny aktuality naleznete <Link to="/aktuality">zde</Link>.
+          </p>
         </NewsWrapper>
       </Wrapper>
     </>

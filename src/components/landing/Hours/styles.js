@@ -12,14 +12,30 @@ export const Wrapper = styled.div`
 `;
 
 export const HoursWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-columns: 20% 40% 40%;
 
   @media (max-width: 960px) {
     flex-direction: column;
   }
+
+  p {
+    margin-bottom: 2.5rem;
+    font-size: 18pt;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #707070;
+
+    @media (max-width: 960px) {
+      mix-blend-mode: unset;
+    }
+  }
+`;
+
+export const NotificationWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const FlexRow = styled.div`
@@ -37,14 +53,10 @@ export const FlexRow = styled.div`
     font-size: 18pt;
     font-weight: normal;
     line-height: 1.2;
-    color: ${({ theme }) => (theme === 'dark' ? '#c7c7c7' : '#707070')};
+    color: #707070;
 
     @media (max-width: 960px) {
-      mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
-    }
-
-    strong {
-      color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#707070')};
+      mix-blend-mode: unset;
     }
   }
 `;

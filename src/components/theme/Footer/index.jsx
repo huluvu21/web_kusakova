@@ -6,7 +6,7 @@ export const Footer = () => (
   <Wrapper>
     <Flex as={Container}>
       <Details>
-        <h2>Ordinace Kusákovi</h2>
+        <h2>Zdravotnické zařízení Kusákovi</h2>
         <span>
           © Všechna práva vyhrazena | {new Date().getFullYear()} | S{" "}
           <span aria-label="love" role="img">

@@ -32,18 +32,14 @@ export const Contact = () => (
     </Details>
     <Details>
       <h1>Kde nás najdete</h1>
-      <h2>Adresa</h2>
       <p>Vratimovská 650, 739 34 Václavovice</p>
-      <a target="_blank" href="http://www.mapy.cz/s/l0Ea">
-        <img
-          src="http://1.im.cz/mapyp/img/usericon.gif"
-          width="88"
-          height="31"
-          border="0"
-          alt=""
-          title="Mapy.cz: Najdete nás zde"
-        />
-      </a>
+      <iframe
+        style={{ border: "none" }}
+        src="https://frame.mapy.cz/s/pomelupeke"
+        width="100%"
+        height="466"
+        frameborder="0"
+      ></iframe>
       <p>
         V blízkosti je zastávka autobusů městské hromadné dopravy (číslo 28).
         Zastávka se jmenuje Václavovice střed. Jedete-li autem, pak je pro Vás k
