@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Container } from "components/common";
 import { Wrapper, NewsWrapper, NewsItem } from "./styles";
 import { HeadlineWrapper } from "components/common/HeadlineWrapper";
 
-const News = ({ news }) => {
+const AllNews = ({ news }) => {
+  console.log(JSON.stringify(news));
   return (
     <>
-      <HeadlineWrapper id="aktuality" as={Container}>
-        <h1>Důležité aktuality</h1>
+      <HeadlineWrapper as={Container}>
+        <h1>Oznámení</h1>
       </HeadlineWrapper>
       <Wrapper>
         <NewsWrapper as={Container}>
@@ -23,13 +23,10 @@ const News = ({ news }) => {
               {news.length - 1 > index && <hr />}
             </>
           ))}
-          <p>
-            Všechna oznámení naleznete <Link to="/oznameni">zde</Link>.
-          </p>
         </NewsWrapper>
       </Wrapper>
     </>
   );
 };
 
-export default News;
+export default AllNews;

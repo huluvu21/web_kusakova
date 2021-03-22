@@ -4,13 +4,13 @@ import { Container } from "components/common";
 import NavbarLinks from "../NavbarLinks";
 import { Wrapper, Brand } from "./styles";
 
-const Navbar = () => {
+const Navbar = ({ isHomePage, newsCount }) => {
   return (
     <Wrapper as={Container}>
       <Brand as={Link} to="/">
         Zdravotnické zařízení Kusákovi
       </Brand>
-      <NavbarLinks desktop />
+      {isHomePage && <NavbarLinks desktop newsCount={newsCount} />}
     </Wrapper>
   );
 };

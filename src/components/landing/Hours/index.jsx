@@ -4,7 +4,7 @@ import { Wrapper, HoursWrapper, FlexRow, NotificationWrapper } from "./styles";
 import { HeadlineWrapper } from "components/common/HeadlineWrapper";
 import { TimeBlock } from "components/common/TimeBlock";
 
-const Hours = ({ hours }) => {
+const Hours = ({ hours, text }) => {
   return (
     <>
       <HeadlineWrapper id="ordinacni-hodiny" as={Container}>
@@ -21,24 +21,11 @@ const Hours = ({ hours }) => {
       </Wrapper>
       <Wrapper>
         <NotificationWrapper as={Container}>
-          <FlexRow>
-            <p>
-              Odběry krve a biologického materiálu: úterý, středa, pátek{" "}
-              <strong>6:30 - 7:15</strong>.
-            </p>
-          </FlexRow>
-          <FlexRow>
-            <p>
-              Telefonické konzultace a dotazy nelze řešit v ordinačních hodinách
-              a v době určené pro objednané.
-            </p>
-          </FlexRow>
-          <FlexRow>
-            <p>
-              V době určené pro objednané budou ošetřeni pouze tito předem
-              objednaní klienti. Neobjednaní klienti ošetřeni nebudou.
-            </p>
-          </FlexRow>
+          <FlexRow
+            dangerouslySetInnerHTML={{
+              __html: text,
+            }}
+          ></FlexRow>
         </NotificationWrapper>
       </Wrapper>
     </>

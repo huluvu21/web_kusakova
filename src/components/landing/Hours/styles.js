@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 export const HoursWrapper = styled.div`
   display: grid;
   grid-column-gap: 1rem;
-  grid-template-columns: 20% 40% 40%;
+  grid-template-columns: 22% 39% 39%;
 
   @media (max-width: 960px) {
     flex-direction: column;
@@ -41,11 +41,12 @@ export const NotificationWrapper = styled.div`
 export const FlexRow = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   justify-content: space-between;
 
   @media (max-width: 960px) {
-    flex-direction: column;
+    align-items: center;
   }
 
   p {

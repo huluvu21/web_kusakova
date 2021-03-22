@@ -3,10 +3,10 @@ import { Header } from "components/theme";
 import { Container } from "components/common";
 import { Wrapper, IntroWrapper, Details, Thumbnail } from "./styles";
 
-export const Intro = () => {
+export const Intro = ({ isHomePage, newsCount }) => {
   return (
     <Wrapper>
-      <Header />
+      <Header isHomePage={isHomePage} newsCount={newsCount} />
       <IntroWrapper as={Container}>
         <Details>
           <h1>Vítejte u nás!</h1>
