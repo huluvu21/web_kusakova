@@ -48,7 +48,7 @@ export const SEO = ({
       <meta name="image" content={Thumbnail} />
       <script type="application/ld+json">{structuredDataOrganization}</script>
       <title>{title}</title>
-      <html lang="cz" dir="ltr" />
+      <html lang="cs" dir="ltr" />
     </Helmet>
   );
 };

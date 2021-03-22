@@ -21,6 +21,7 @@ export const Contact = ({ howToContactUs, address, addressInfo }) => (
         width="100%"
         height="466"
         frameborder="0"
+        title="Mapa"
       ></iframe>
       <div
         dangerouslySetInnerHTML={{
