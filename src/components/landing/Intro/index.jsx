@@ -16,7 +16,7 @@ export const Intro = ({ isHomePage, newsCount }) => {
           </p>
         </Details>
         <Thumbnail>
-          <img src="images/aesculap_staff.png" alt="Aesculap" />
+          <img src="/images/aesculap_staff.png" alt="Aesculap" />
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>
