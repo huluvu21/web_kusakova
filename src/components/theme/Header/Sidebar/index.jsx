@@ -2,10 +2,10 @@ import React from "react";
 import NavbarLinks from "../NavbarLinks";
 import { Wrapper } from "./styles";
 
-const Sidebar = ({ sidebar, toggle }) => {
+const Sidebar = ({ sidebar, toggle, newsCount }) => {
   return (
     <Wrapper active={sidebar} onClick={toggle}>
-      <NavbarLinks />
+      <NavbarLinks newsCount={newsCount} />
     </Wrapper>
   );
 };
