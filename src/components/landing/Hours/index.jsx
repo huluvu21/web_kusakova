@@ -11,7 +11,16 @@ const Hours = ({ hours, text }) => {
         <h1>Ordinační hodiny</h1>
       </HeadlineWrapper>
       <Wrapper>
-        <HoursWrapper as={Container}>
+        <HoursWrapper
+          as={Container}
+          maxBlocks={Math.max(
+            hours.pondeli.value.length,
+            hours.utery.value.length,
+            hours.streda.value.length,
+            hours.ctvrtek.value.length,
+            hours.patek.value.length
+          )}
+        >
           <TimeBlock name="Pondělí" blocks={hours.pondeli.value} />
           <TimeBlock name="Úterý" blocks={hours.utery.value} />
           <TimeBlock name="Středa" blocks={hours.streda.value} />
