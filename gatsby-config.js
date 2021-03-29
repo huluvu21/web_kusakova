@@ -10,9 +10,9 @@ const getDeliveryClientConfig = () => {
     languageCodenames: [`default`],
   }
 
-  if (process.env.KONTENT_PREVIEW_API_KEY) {
+  if (process.env.USE_PREVIEW) {
     config.usePreviewUrl = true
-    config.authorizationKey = process.env.KONTENT_PREVIEW_API_KEY
+    config.authorizationKey = process.env.KK_PREVIEW_KEY
   }
 
   return config
