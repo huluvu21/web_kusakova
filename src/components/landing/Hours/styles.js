@@ -14,7 +14,8 @@ export const Wrapper = styled.div`
 export const HoursWrapper = styled.div`
   display: grid;
   grid-column-gap: 1rem;
-  grid-template-columns: 22% 39% 39%;
+  grid-template-columns: ${({ maxBlocks }) =>
+    maxBlocks === 2 ? "22% 39% 39%" : "22% 78%"};
 
   @media (max-width: 960px) {
     flex-direction: column;
