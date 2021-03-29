@@ -1,2 +1,2 @@
 [context.preview.environment]
-  USE_PREVIEW = true
+  USE_PREVIEW = "true"
