@@ -4,6 +4,20 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const getDeliveryClientConfig = () => {
+  let config = {
+    projectId: "e2e6f721-08fb-00ed-a10a-a6c8cfef817f",
+    languageCodenames: [`default`],
+  }
+
+  if (process.env.KONTENT_PREVIEW_API_KEY) {
+    config.usePreviewUrl = true
+    config.authorizationKey = process.env.KONTENT_PREVIEW_API_KEY
+  }
+
+  return config
+}
+
 module.exports = {
   siteMetadata: {
     title: config.defaultTitle,
@@ -18,11 +32,7 @@ module.exports = {
     {
       resolve: `@kentico/gatsby-source-kontent`,
       options: {
-        projectId: `e2e6f721-08fb-00ed-a10a-a6c8cfef817f`, // Fill in your Project ID
-        // Please note that with the Sample Project generated above, `en-US` is the default language for the project and this config. For a blank project, this needs to be `default`.
-        languageCodenames: [
-          `default`, // Or the languages in your project (Project settings -> Localization)
-        ],
+        ...getDeliveryClientConfig(),
       },
     },
     {
